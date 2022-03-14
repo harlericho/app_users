@@ -44,7 +44,12 @@ To start the project <project_app_users>, you must follow the following steps:
 There is another method to execute the project
 
 - In the root of the project open a terminal and execute the command: php -S 127.0.0.1:7000
-  > [http:/127.0.0.1:7000/?option=GET](http://127.0.0.1:7000/?option=GET)
+
+  - {GET} = [http:/127.0.0.1:7000/?](http://127.0.0.1:7000/?)
+  - {GET/ID} = [http:/127.0.0.1:7000/?id=?](http://127.0.0.1:7000/?id=?)
+  - {POST} = [http:/127.0.0.1:7000/?](http://127.0.0.1:7000/?)
+  - {PUT/ID} = [http:/127.0.0.1:7000/?id=?](http://127.0.0.1:7000/?id=?)
+  - {DELETE/ID} = [http:/127.0.0.1:7000/?id=?](http://127.0.0.1:7000/?id=?)
 
 <div align="center">
 

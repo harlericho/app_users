@@ -2,44 +2,50 @@
 require_once './app/models/user.php';
 class Validation
 {
-    public static function validationUserDni($dni)
+    public static function dniLength($dni)
     {
-        $user = User::validationUserDni($dni);
-        if ($user) {
-            return array(
-                'status' => 'error',
-                'message' => 'Dni is already taken'
-            );
+        if (strlen($dni) == 10) {
+            return true;
         } else {
             return false;
         }
     }
-    public static function validationUserEmail($email)
+    public static function dniEmpty($dni)
     {
-        $user = User::validationUserEmail($email);
-        if ($user) {
-            return array(
-                'status' => 'error',
-                'message' => 'Email is already taken'
-            );
+        if (!empty($dni)) {
+            return true;
         } else {
             return false;
         }
     }
-    public static function validationUserDniUpdate($dni, $id)
+    public static function emailVerification($email)
     {
-        $user = User::validationUserDniUpdate($dni, $id);
-        if ($user) {
-            return $user;
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
         } else {
             return false;
         }
     }
-    public static function validationUserEmailUpdate($email, $id)
+    public static function emailEmpty($email)
     {
-        $user = User::validationUserEmailUpdate($email, $id);
-        if ($user) {
-            return $user;
+        if (!empty($email)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static function namesEmpty($names)
+    {
+        if (!empty($names)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static function rolEmpty($rol)
+    {
+        if (!empty($rol)) {
+            return true;
         } else {
             return false;
         }
